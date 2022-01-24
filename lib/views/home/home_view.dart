@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../widgets/navigation_bar/nav_bar.dart';
 import '../../widgets/centered_view/centered_view.dart';
 import '../../widgets/course_details/course_details.dart';
+import '../../widgets/call_to_action/call_to_action.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -16,7 +17,12 @@ class Home extends StatelessWidget {
               NavBar(),
               Expanded(
                 child: Row(children: [
-                  CourseDetails(),
+                    CourseDetails(),
+                    Expanded(
+                    child: Center(
+                      child: CallToAction('Join Course'),
+                    ),
+                  )
                 ]),
               )
             ],
